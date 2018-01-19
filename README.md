@@ -1,3 +1,5 @@
+IT Kolledži aine digitaalloogika- ja süsteemid kodutöö funktsiooni arvutamiseks kirjutatud pisike pythoni script.  
+
 ## ?
 
 Kuna kodutöö juhend on väga windows'i keskne siis siin on üks pisike pythoni script mis 
@@ -6,8 +8,6 @@ arvutab matriklinumbrist:
 * määramatuspiirkonna
 * 1-de piirkonna
 * 0-ide piirkonna
-
-IT Kolledži aine digitaalloogika- ja süsteemid kodutöö funktsiooni arvutamiseks kirjutatud pisike pythoni script.  
 
 http://www.diskmat.ee/itk/itkodo.htm
 
