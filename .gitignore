@@ -1,5 +1,5 @@
 .idea
 *.iml
 env
-zamiacad/eclipse/.eclipse
+zamiacad/eclipse/.metadata
 zamiacad/eclipse/workspace
