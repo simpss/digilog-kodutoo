@@ -6,6 +6,8 @@ end test;
 
 architecture bench of test is
 
+  signal n4x1, n4x2, n4x3, n4x4: bit;
+
   signal x1, x2, x3, x4: bit;
 
   signal y4, y9, y10: bit;
@@ -41,6 +43,14 @@ begin
 
 
   -- Punkti 4 tulemus
+
+  n4x1 <= '0', '0' after 20 ns, '0' after 40 ns, '0' after 60 ns, '1' after 80 ns, '1' after 100 ns;
+
+  n4x2 <= '0', '0' after 20 ns, '0' after 40 ns, '1' after 60 ns, '0' after 80 ns, '0' after 100 ns;
+
+  n4x3 <= '0', '1' after 20 ns, '1' after 40 ns, '1' after 60 ns, '0' after 80 ns, '1' after 100 ns;
+
+  n4x4 <= '1', '0' after 20 ns, '1' after 40 ns, '0' after 60 ns, '1' after 80 ns, '0' after 100 ns;
 
   y4 <= (not x1 and not x2 and not x3 and x4) or
 
