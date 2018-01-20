@@ -96,10 +96,10 @@ begin
   '0' after 80 ns, '1' after 90 ns, '0' after 100 ns, '1' after 110 ns, '0' after 120 ns, '1' after 130 ns, '0' after 140 ns, 
   '1' after 150 ns, '0' after 160 ns;
 
-  y8 <= (n8x3 or n8x4) and
-        (not n8x2 or not n8x4) and
-        (not n8x1 or not n8x2) and
-        (not n8x1 or (not n8x3 and not n8x4));
+  y8 <= (not n8x3 and not n8x4) or
+        (n8x2 and n8x4) or
+        (n8x1 and n8x2) or
+        (n8x1 and n8x3 and n8x4);
 
   -- Punkti 9 tulemus
 
