@@ -2,4 +2,4 @@ docker run -ti --rm \
            -e DISPLAY=$DISPLAY \
            -v /tmp/.X11-unix:/tmp/.X11-unix \
            -v "`pwd`":/workspace \
-fgrehm/eclipse:v4.4.1
+simpss/zamiacad:v4.4.1
