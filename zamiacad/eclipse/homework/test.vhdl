@@ -79,39 +79,27 @@ begin
   '0' after 80 ns, '1' after 90 ns, '0' after 100 ns, '1' after 110 ns, '0' after 120 ns, '1' after 130 ns, '0' after 140 ns, 
   '1' after 150 ns, '0' after 160 ns;
 
-  y7 <= (not x1 and not x2 and not x3 and x4) or
-
-        (not x1 and not x2 and x3 and not x4) or
-
-        (not x1 and not x2 and x3 and x4) or
-
-        (not x1 and x2 and x3 and not x4) or
-
-        (x1 and not x2 and not x3 and x4) or
-
-        (x1 and not x2 and x3 and not x4);
+  y7 <= (not n7x1 and not n7x2 and n7x4) or
+        (not n7x2 and not n7x3 and n7x4) or
+        (not n7x1 and n7x3 and not n7x4) or
+        (not n7x2 and n7x3 and not n7x4);
         
   -- Punkti 8 tulemus
 
-  n8x1 <= '0', '0' after 20 ns, '0' after 40 ns, '0' after 60 ns, '1' after 80 ns, '1' after 100 ns;
+  n8x1 <= '0', '1' after 80 ns, '0' after 160 ns;
 
-  n8x2 <= '0', '0' after 20 ns, '0' after 40 ns, '1' after 60 ns, '0' after 80 ns, '0' after 100 ns;
+  n8x2 <= '0', '1' after 40 ns, '0' after 80 ns, '1' after 120 ns, '0' after 160 ns;
+  
+  n8x3 <= '0', '1' after 20 ns, '0' after 40 ns, '1' after 60 ns, '0' after 80 ns, '1' after 100 ns, '0' after 120 ns, '1' after 140 ns;
+  
+  n8x4 <= '0', '1' after 10 ns, '0' after 20 ns, '1' after 30 ns, '0' after 40 ns, '1' after 50 ns, '0' after 60 ns, '1' after 70 ns, 
+  '0' after 80 ns, '1' after 90 ns, '0' after 100 ns, '1' after 110 ns, '0' after 120 ns, '1' after 130 ns, '0' after 140 ns, 
+  '1' after 150 ns, '0' after 160 ns;
 
-  n8x3 <= '0', '1' after 20 ns, '1' after 40 ns, '1' after 60 ns, '0' after 80 ns, '1' after 100 ns;
-
-  n8x4 <= '1', '0' after 20 ns, '1' after 40 ns, '0' after 60 ns, '1' after 80 ns, '0' after 100 ns;
-
-  y8 <= (not x1 and not x2 and not x3 and x4) or
-
-        (not x1 and not x2 and x3 and not x4) or
-
-        (not x1 and not x2 and x3 and x4) or
-
-        (not x1 and x2 and x3 and not x4) or
-
-        (x1 and not x2 and not x3 and x4) or
-
-        (x1 and not x2 and x3 and not x4);
+  y8 <= (n8x3 or n8x4) and
+        (not n8x2 or not n8x4) and
+        (not n8x1 or not n8x2) and
+        (not n8x1 or (not n8x3 and not n8x4));
 
   -- Punkti 9 tulemus
 
